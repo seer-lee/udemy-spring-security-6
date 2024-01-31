@@ -15,7 +15,11 @@ public class ProjectSecurityConfig {
 //                .and().formLogin()
 //                .and().httpBasic();
 
-        http.authorizeHttpRequests().anyRequest().denyAll()
+//        http.authorizeHttpRequests().anyRequest().denyAll()
+//                .and().formLogin()
+//                .and().httpBasic();
+
+        http.authorizeHttpRequests().anyRequest().permitAll()
                 .and().formLogin()
                 .and().httpBasic();
 
